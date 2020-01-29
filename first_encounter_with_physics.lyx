@@ -1,0 +1,3934 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage[nofancy]{svninfo}
+\usepackage{color}
+
+\svnInfo $Id: first_encounter_with_physics.lyx 6 2011-05-12 02:26:16Z botsnlinux $
+
+\definecolor{linkred}{rgb}{0.5,0,0}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=linkred,
+    urlcolor=blue
+}
+
+\usepackage[nonumberlist]{glossaries}
+\makeglossaries
+
+\include{glossary_terms}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+A FIRST Encounter with Physics
+\end_layout
+
+\begin_layout Author
+Steven Bell
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+today
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+SVN Revision 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+svnInfoRevision
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 4in
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+This document is licensed under the Creative Commons Attribution ShareAlike
+ license.
+ To view a copy of the license, go to 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://creativecommons.org/licenses/by-sa/3.0/"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/somerights20.png
+	width 0.75in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Don't put a number on the title page
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+To do list:
+\end_layout
+
+\begin_layout Itemize
+Sections
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Finish vectors
+\end_layout
+
+\begin_layout Itemize
+Pneumatics
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Force
+\end_layout
+
+\begin_layout Itemize
+Speed??
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Drive system
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Friction, traction
+\end_layout
+
+\begin_layout Itemize
+When does it not help to have more motors?
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Examples of arms in torque section
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+What if we add some springs?!
+\end_layout
+
+\begin_layout Itemize
+Motors and power - how do we get the most out of a motor?
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Ball trajectories
+\end_layout
+
+\begin_layout Itemize
+Electricity
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Voltage drop, wire guages
+\end_layout
+
+\begin_layout Itemize
+Pots and voltage division?
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+Introduction
+\end_layout
+
+\begin_layout Standard
+The purpose of this document is to give high school students a basic introductio
+n to physics, using examples and applications from the FIRST Robotics Competitio
+n.
+ It is intended to help students who have not yet taken physics to be able
+ to solve some of the physics-related problems that come up in the FRC robot
+ design process.
+ A knowledge of algebra is required; understanding of geometry and basic
+ trigonometry (specifically sine and cosine) will be helpful.
+\end_layout
+
+\begin_layout Standard
+Perhaps this document will ultimately become a useful resource for learning
+ physics.
+ Who knows, perhaps when every high school in the country has a FRC team
+ this will become the definitive physics text!
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Units and calculations
+\end_layout
+
+\begin_layout Standard
+We will use the metric system throughout this document, because it makes
+ calculations much easier when we start using complex derived units.
+ If you aren't familiar with the metric system (more correctly known as
+ the SI system), 
+\begin_inset CommandInset href
+LatexCommand href
+name "look it up on Wikipedia"
+target "http://en.wikipedia.org/wiki/International_System_of_Units"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Base units
+\end_layout
+
+\begin_layout Standard
+There are four fundamental units we will deal with in this document:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+length
+\series default
+, measured in meters (abbreviated m);
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+mass
+\series default
+, measured in grams (g);
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+time
+\series default
+, measured in seconds (s);
+\end_layout
+
+\begin_layout Itemize
+and 
+\series bold
+electrical current
+\series default
+, measured in Amps (A).
+\end_layout
+
+\begin_layout Subsection
+Derived units
+\end_layout
+
+\begin_layout Standard
+As you probably know, we often combine units to create new units for other
+ things.
+ For example, when we divide distance by time to get speed, we divide a
+ distance unit (m) by a time unit (s) to get a unit for speed, 
+\begin_inset Formula $\frac{m}{s}$
+\end_inset
+
+.
+ If we were using miles to measure distance and hours to measure time, then
+ we would measure speed in 
+\begin_inset Formula $\frac{miles}{hour}$
+\end_inset
+
+, commonly abbreviated MPH.
+ In the same way, when we multiply two distances (m) by each other, we get
+ square meters (
+\begin_inset Formula $\mathrm{m^{2}}$
+\end_inset
+
+).
+ Or we might say that a 2 meter piece of aluminum stock has a mass of 6
+ kg, giving it a linear mass of 
+\begin_inset Formula $\frac{6\,\mathrm{kg}}{2\,\mathrm{m}}=3\,\mathrm{\frac{kg}{m}}$
+\end_inset
+
+.
+ Quite often, we give these units new names.
+ For example, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gls{force}
+\end_layout
+
+\end_inset
+
+ is measured in 
+\begin_inset Formula $\mathrm{\frac{kg\cdot m}{s^{2}}}$
+\end_inset
+
+, which we call a Newton.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+m/s^2 doesn't make a lot of sense to some people...
+\end_layout
+
+\begin_layout Plain Layout
+1 m * 49 N = 49 N-m, but 1ft * 49 N = 49 N-ft: they're both 49, what gives?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Significant figures
+\end_layout
+
+\begin_layout Subsubsection
+Counting significant figures
+\end_layout
+
+\begin_layout Standard
+More often than not, physics deals with measurements.
+ We measure a lot of different things, such as mass, force, speed, and current,
+ and we use those measurements in our calculations.
+ An important thing to keep in mind is that measurements are never perfectly
+ precise.
+ If I measure a piece of aluminum stock and tell you that it is 1 meter
+ long, it might actually be 0.98 meters long, 1.0002 meters long, or even
+ 1.3 meters long.
+\end_layout
+
+\begin_layout Standard
+In physics and engineering, we have to take special care that we don't treat
+ our numbers with more precision than they have.
+ We define precision by the number of 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+glspl{sigfig}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ a number has.
+ There are a few simple rules for counting significant figures:
+\end_layout
+
+\begin_layout Itemize
+All leading zeros don't count.
+ A measurement of 003 seconds is clearly not any more precise than a measurement
+ of 3 seconds.
+ More importantly, a measurement of 3 milliseconds (0.003 seconds) does not
+ have more significant figures than a measurement of 3 seconds.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Explain why this is
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Trailing zeros before a decimal point don't count, unless they are followed
+ by zeros after the decimal point.
+ Because of the way we round numbers, 
+\begin_inset Quotes eld
+\end_inset
+
+100 meters
+\begin_inset Quotes erd
+\end_inset
+
+ could refer to 98 meters or 130 meters - just like 1 meter could refer
+ to 0.98 and 1.3 meters.
+ The two zeros at the end of 100 don't make it more precise.
+\end_layout
+
+\begin_layout Itemize
+Trailing zeros after a decimal point do count.
+ As you would assume, 2.000 meters is more precise than 2 meters.
+\end_layout
+
+\begin_layout Itemize
+All non-zero digits count as significant figures.
+\end_layout
+
+\begin_layout Standard
+The following table shows some examples of counting significant figures:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="3">
+<features tabularvalignment="middle">
+<column alignment="right" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Measurement
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Number of significant figures
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.1415
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+All non-zero digits count
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.002
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Leading zeros don't count
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.002010
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Trailing zeros after a decimal point count
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Trailing zeros before a decimal point don't count,
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1000.0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+unless followed by figures after the decimal point
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsubsection
+Math with significant figures
+\end_layout
+
+\begin_layout Standard
+Math with significant figures boils down to three rules:
+\end_layout
+
+\begin_layout Itemize
+When multiplying or dividing, the result must have the same number of significan
+t figures as the least precise number in the equation.
+ In the equation below, 
+\begin_inset Quotes eld
+\end_inset
+
+0.3
+\begin_inset Quotes erd
+\end_inset
+
+ only has one significant figure, so the answer must also have one significant
+ figure.
+\begin_inset Formula 
+\[
+0.54\cdot0.3=0.2
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+When adding or subtracting, the result must have the 
+\shape italic
+same precision
+\shape default
+ as the least precise value.
+ In the equation 
+\begin_inset Formula $100+3$
+\end_inset
+
+, the least precise value is 100, with the only significant digit in the
+ 100s place.
+ If we wrote the answer as 103, we would be implying that the 100 is precise
+ to the ones place, which is not true.
+ We have to round 103 to the nearest 100, so the correct answer is 100.
+\end_layout
+
+\begin_layout Itemize
+Sometimes, numbers have perfect precision.
+ For example, the radius of of a sprocket is exactly half of its diameter.
+ In this case, 
+\begin_inset Quotes eld
+\end_inset
+
+2
+\begin_inset Quotes erd
+\end_inset
+
+ can be treated as 
+\begin_inset Quotes eld
+\end_inset
+
+2.0000...
+\begin_inset Quotes erd
+\end_inset
+
+ without being written that way.
+\end_layout
+
+\begin_layout Standard
+These rules may be a little confusing at first, but they will make sense
+ with practice.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Section
+Holonomic Drivetrains
+\end_layout
+
+\begin_layout Subsection
+Concepts: Vectors
+\end_layout
+
+\begin_layout Plain Layout
+A vector is a way to represent things which have both magnitude and direction.
+ An car's velocity, for example, has a speed and a direction: 50 kph north,
+ or 20 
+\begin_inset Formula $\frac{m}{s}$
+\end_inset
+
+ southeast.
+\end_layout
+
+\begin_layout Plain Layout
+//TODO: more on vectors.
+\end_layout
+
+\begin_layout Itemize
+Components x, y, z
+\end_layout
+
+\begin_layout Itemize
+Dot product
+\end_layout
+
+\begin_layout Itemize
+Cross product
+\end_layout
+
+\begin_layout Subsection
+Example
+\end_layout
+
+\begin_layout Plain Layout
+Now, on to our example: a holonomic drivetrain, specifically a Killough
+ drive.
+ This drivetrain has four omniwheels, one on each corner.
+ Omniwheels consist of free-spinning rollers aligned perpendicular to the
+ primary direction of the wheel (See Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:AndyMark-Omniwheel"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/omniwheel.jpg
+	lyxscale 30
+	height 2in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+AndyMark Omniwheel
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:AndyMark-Omniwheel"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+When the wheel turns, it creates a velocity vector in the direction of its
+ main rotation.
+ By adding the vectors for all four wheels we can determine the direction
+ the robot will move.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Gear ratios
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+gear ratio
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Concepts: Force and Torque
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+Gls{force}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+force
+\end_layout
+
+\end_inset
+
+ is a specific term in physics that describes the amount of 
+\begin_inset Quotes eld
+\end_inset
+
+push
+\begin_inset Quotes erd
+\end_inset
+
+ on an object.
+ When a force is exerted on an object - that is, when an object is pushed
+ - it begins to accelerate.
+ This is described by the famous equation
+\begin_inset Formula 
+\begin{equation}
+\mathbf{F}=m\cdot\mathbf{a}\label{eq:f-ma}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ is the force, 
+\begin_inset Formula $m$
+\end_inset
+
+ is the mass of the object, and 
+\begin_inset Formula $\mathbf{a}$
+\end_inset
+
+ is the object's acceleration.
+ It is important to note that in this equation, 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ is the sum of all forces acting on the object.
+ When you stand on the floor, gravity exerts a downward force on your body,
+ and the floor exerts an equal upward force on your body.
+ As a result, the sum of the forces on your body equals 0, and your body
+ doesn't move.
+ In the SI system, force is measured in Newtons; a Newton
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Newton (unit)
+\end_layout
+
+\end_inset
+
+ is equivalent to a 
+\begin_inset Formula $\frac{kg\cdot m}{s^{2}}$
+\end_inset
+
+, which is the units of acceleration 
+\begin_inset Formula $\left(\frac{m}{s^{2}}\right)$
+\end_inset
+
+ multiplied by mass 
+\begin_inset Formula $\left(kg\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+When force is applied to the end of a lever, it produces torque
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+torque
+\end_layout
+
+\end_inset
+
+.
+ Mathematically, we say
+\begin_inset Formula 
+\begin{equation}
+\mathbf{\tau}=\mathbf{r}\times\mathbf{F}\label{eq:torque_crossproduct}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here, the symbol 
+\begin_inset Formula $\times$
+\end_inset
+
+ indicates the cross product
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+cross product
+\end_layout
+
+\end_inset
+
+ of the two vectors, not multiplication.
+ However, if we assume that the force is applied perpendicular to the lever
+ arm, the cross product becomes
+\begin_inset Formula 
+\begin{equation}
+\tau=r\cdot F\label{eq:torque_multiplication}
+\end{equation}
+
+\end_inset
+
+which is a simple multiplication.
+ Torque is measured in Newton-meters (abbreviated N-m).
+\end_layout
+
+\begin_layout Subsection
+Example: Arm Torque
+\end_layout
+
+\begin_layout Standard
+Suppose we have a robot arm as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:torque_example_arm"
+
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/torque/robot_arm.svg
+	height 2.3in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Example robot arm
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:torque_example_arm"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+The arm is 1 meter long from the pivot to the center of the ball, and the
+ ball has a mass of 5 kilograms.
+ The acceleration due to gravity is 9.8 
+\begin_inset Formula $\frac{m}{s^{2}}$
+\end_inset
+
+.
+ For the moment, we will make the (obviously false) assumption that the
+ arm doesn't weigh anything, because it simplifies the problem.
+ How much torque do we need to lift the arm?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Proof using trig that having the arm out horizontally is worst-case?
+\end_layout
+
+\end_inset
+
+ The worst case will occur when the arm is horizontal and trying to lift
+ the ball straight up, as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:torque_example_arm"
+
+\end_inset
+
+.
+ First, we find the downward force on the ball due to gravity, using Equation
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:f-ma"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+F=5\,\mathrm{kg}\cdot9.8\,\mathrm{\frac{m}{s^{2}}}=49\,\mathrm{\frac{kg\cdot m}{s^{2}}=49\,\mathrm{N}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For the ball to not move, the forces on the ball must cancel out, which
+ means that the arm must exert a force of 49 Newtons upward.
+ We can use this information in Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:torque_multiplication"
+
+\end_inset
+
+ to find the torque at the arm joint:
+\begin_inset Formula 
+\[
+\tau=1\,\mathrm{m}\cdot49\,\mathrm{N}=49\,\mathrm{N\cdot m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Of course, our goal is not to hold the ball still - we want to lift it!
+ Thus, we actually need to provide more than 49 Newton-meters of torque.
+\end_layout
+
+\begin_layout Subsection
+Arm Torque, Part 2
+\end_layout
+
+\begin_layout Standard
+In the previous section, we made the assumption that the arm was massless
+ - it didn't weigh anything, and so it didn't require any torque to lift.
+ Obviously, every arm weighs something, so it's important to include the
+ arm in our torque calculations.
+\end_layout
+
+\begin_layout Standard
+If we assume that the arm has a constant linear weight - that is, it doesn't
+ get thinner or lighter towards one end - then we can take the total mass
+ of the arm and act as if that mass is located at a point halfway along
+ the length of the arm.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+This can derived using calculus.
+ If 
+\begin_inset Formula $r$
+\end_inset
+
+ is the radius from the pivot point, 
+\begin_inset Formula $g$
+\end_inset
+
+ is the acceleration due to gravity, and 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is the mass of the arm per unit length, then the total torque is: 
+\begin_inset Formula $\int\mu gr\, dr$
+\end_inset
+
+.
+ This evaluates to 
+\begin_inset Formula $\frac{1}{2}\mu gr^{2}$
+\end_inset
+
+, and since the the total mass of the arm (
+\begin_inset Formula $m$
+\end_inset
+
+) is 
+\begin_inset Formula $\mu r$
+\end_inset
+
+, the torque is 
+\begin_inset Formula $\frac{1}{2}mgr$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ Suppose that in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:torque_example_arm"
+
+\end_inset
+
+ the arm weighs 8 kg.
+ Thus, the downward force on the arm due to gravity is:
+\begin_inset Formula 
+\[
+F=8\,\mathrm{kg}\cdot9.8\,\mathrm{\frac{m}{s^{2}}}=78\,\mathrm{N}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The halfway point on the arm is 
+\begin_inset Formula $\frac{1\,\mathrm{m}}{2}=0.5\,\mathrm{m}$
+\end_inset
+
+, which means that the torque will be
+\begin_inset Formula 
+\[
+\tau=0.5\,\mathrm{m}\cdot78\,\mathrm{N}=39\,\mathrm{N\cdot m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can calculate the total torque at the arm joint simply by adding the
+ torque from the ball and the torque from the arm:
+\begin_inset Formula 
+\[
+\tau_{total}=49\,\mathrm{N\cdot m}+39\,\mathrm{N\cdot m}=88\,\mathrm{N\cdot m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If the arm has several sections of different size and weight, we can treat
+ them each as separate pieces and calculate the torque for each one, just
+ like we treated the ball and arm as separate pieces and calculated the
+ total torque by adding them together.
+\end_layout
+
+\begin_layout Subsection
+Gearing
+\end_layout
+
+\begin_layout Standard
+Suppose now that we have to power the arm with a motor which can only provide
+ 1 N-m of torque
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+torque
+\end_layout
+
+\end_inset
+
+.
+ Clearly, connecting the motor directly to the arm won't work, so what do
+ we do? The answer is that we use a lever arm, in the form of a gear
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+gear
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Imagine a gear that is 2 cm (0.02 m) in diameter, as in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:2-cm-gear"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/torque/single_gear.svg
+	height 1in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+2 cm gear
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:2-cm-gear"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The length of the lever arm is the radius of the gear: 
+\begin_inset Formula $\frac{2\,\mathrm{cm}}{2}=1\,\mathrm{cm}$
+\end_inset
+
+.
+ If we apply 1 N-m of torque to the center, the force shown by the arrow
+ can be found by rearranging Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:torque_multiplication"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+F=\frac{\tau}{r}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F=\frac{1\,\mathrm{N\cdot m}}{0.01\,\mathrm{m}}=100\,\mathrm{N}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/torque/gears_8t_40t.svg
+	height 2.5in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+2 cm gear driving 10 cm gear
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:little_driving_big"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:little_driving_big"
+
+\end_inset
+
+, the gear teeth transmit the force to a second gear, 10 cm (0.10 m) in diameter.
+ The torque on this gear will be
+\begin_inset Formula 
+\[
+\tau=0.05\,\mathrm{m}\cdot100\,\mathrm{N}=5\,\mathrm{N\cdot m}
+\]
+
+\end_inset
+
+which is a big improvement! To get a torque greater than 88 N-m, we can
+ use additional stages, as shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:two-stage-gearing"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/torque/gears_8t_40t_twostage.svg
+	height 2.5in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Two-stage gearing.
+ The first small gear drives a large gear, which is fixed to the same shaft
+ as a second small gear.
+ The second gear drives another large gear, producing an overall gear ratio
+ of 25:1.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:two-stage-gearing"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As you've probably observed, the change in torque is 
+\begin_inset Formula 
+\begin{equation}
+\tau_{out}=\tau_{in}\cdot\frac{\mathrm{driven\, gear}}{\mathrm{driving\, gear}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For example, if an 8-tooth gear drives a 40-tooth gear, the output will
+ have 
+\begin_inset Formula $\frac{40}{8}=5$
+\end_inset
+
+ times the torque.
+ Notice, however, that we have to turn the 8-tooth gear around 5 times for
+ the 40-tooth gear to turn around once.
+ So if the motor spins at 1000 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gls{rpm}
+\end_layout
+
+\end_inset
+
+, the output will spin at only 
+\begin_inset Formula $1000\cdot\frac{8}{40}=200$
+\end_inset
+
+ RPM.
+ This is referred to as a 5:1 gear ratio, since five turns of the input
+ produces one turn of the output.
+\end_layout
+
+\begin_layout Standard
+To summarize: when a small gear drives a larger gear, the result is slower
+ but has more torque.
+ This is referred to as 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gls{geardown}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+, because it results in a lower speed.
+ When a large gear drives a smaller gear, the result is faster but has less
+ torque.
+ This is referred to as 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gls{gearup}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ The same concept applies when using sprockets and chain or pulleys and
+ belts.
+ If a 12-tooth sprocket drives a 24 tooth sprocket, the output will have
+ half the speed and twice torque.
+\end_layout
+
+\begin_layout Section
+Picking a Motor
+\end_layout
+
+\begin_layout Standard
+Picking the right motors for each mechanism is an important step in building
+ a high-performance robot.
+ By carefully analyzing the system you're designing and the motors you have,
+ you can squeeze the best performance out of each motor.
+\end_layout
+
+\begin_layout Subsection
+Concepts: Motor characteristics, Part 1
+\end_layout
+
+\begin_layout Standard
+There are four important characteristics we need to know for every motor
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+motor
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+Stall torque
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+stall torque
+\end_layout
+
+\end_inset
+
+, the amount of torque the motor produces when 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gls{stalled}
+\end_layout
+
+\end_inset
+
+.
+ This will always be the maximum torque the motor can produce.
+\end_layout
+
+\begin_layout Itemize
+Stall current
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+stall current
+\end_layout
+
+\end_inset
+
+, the amount of electrical 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gls{current}
+\end_layout
+
+\end_inset
+
+ the motor draws when stalled.
+ This will always be the maximum current.
+\end_layout
+
+\begin_layout Itemize
+Free speed
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+free speed
+\end_layout
+
+\end_inset
+
+, the speed at which the motor spins when nothing is connected to it.
+ This will be the motor's maximum speed.
+\end_layout
+
+\begin_layout Itemize
+Free current
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+free current
+\end_layout
+
+\end_inset
+
+, the amount of current the motor draws when spinning freely.
+ This will be the minimum current.
+\end_layout
+
+\begin_layout Standard
+These values are typically given on the motor's datasheet, and are valid
+ only for a particular voltage (most often 12 V).
+ The Fisher-Price motor, for example, has the values shown in Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:FP-Motor-characteristics"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+Stall Torque
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+Stall Current
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+Free Speed
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+Free Current
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+N-m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+Amps
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+RPM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+Amps
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.45
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+70
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15,600
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Fisher-Price Motor characteristics (Taken from Appendix 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Motor-comparison-table"
+
+\end_inset
+
+)
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:FP-Motor-characteristics"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The performance between these maximum and minimum values is linear, which
+ makes them easy to work with.
+ A plot of speed
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+motor speed
+\end_layout
+
+\end_inset
+
+ and current
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+motor current
+\end_layout
+
+\end_inset
+
+ as a function of torque is shown in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:speed-torque_FP"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/motor_selection/speed_torque_FP.eps
+	height 3in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Speed and current as a function of torque for the Fisher-Price motor
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:speed-torque_FP"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Example: Kicker winch
+\end_layout
+
+\begin_layout Standard
+Suppose we have a winch designed to pull back a kicking mechanism, which
+ we need to drive with one of the kit motors.
+ For now, let's select the Fisher-Price motor with the plastic gearbox.
+ The cable wraps around a winch barrel which is 4 cm in diameter.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+A photo would be cool here
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/torque/winchbarrel.svg
+	height 2in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Diagram for kicker winch example
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Looking at the table in Appendix 
+\begin_inset CommandInset ref
+LatexCommand vref
+reference "sec:Motor-comparison-table"
+
+\end_inset
+
+, the Fisher-Price motor by itself has a stall torque of 0.45 N-m.
+ The gearbox has a 139:1 gear ratio, meaning that the motor turns around
+ 139 times for each time the white output shaft turns around once.
+ The output shaft torque is simply the input torque multiplied by the gear
+ ratio:
+\begin_inset Formula 
+\[
+\tau_{out}=0.45\,\mathrm{N\cdot m}\cdot139=63\,\mathrm{N\cdot m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can find the force on the cable by dividing by the length of the lever
+ arm (the radius of the winch barrel):
+\begin_inset Formula 
+\[
+F=\frac{63\,\mathrm{N\cdot m}}{0.020\,\mathrm{m}}=3150\,\mathrm{N}
+\]
+
+\end_inset
+
+That's equivalent to approximately 700 pounds, a LOT of force! Now, there's
+ no way we'd actually get this much torque out of the motor, for several
+ reasons:
+\end_layout
+
+\begin_layout Itemize
+We lose power to 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gls{friction}
+\end_layout
+
+\end_inset
+
+ in the gearbox.
+ For a single well-designed gearing stage, the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gls{loss}
+\end_layout
+
+\end_inset
+
+ is between 5% and 10%.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Can be as low as 2%
+\end_layout
+
+\end_inset
+
+ The Fisher-Price gearbox uses cheap plastic gears and has 4 stages, so
+ we'll estimate its overall efficiency at 60%.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Clarify efficiency
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+We don't want to run the motor anywhere near stall torque: when the motor
+ stalls, all of the electrical energy going into it is converted into heat
+ instead of motion.
+ Within a few seconds, the motor will begin to smoke.
+\end_layout
+
+\begin_layout Itemize
+At stall, the Fisher-Price motor will draw 70 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+glspl{amp}
+\end_layout
+
+\end_inset
+
+, which will trip the breaker.
+ We need to use less than 40 A, and would prefer to use even less than that.
+ As mentioned earlier, torque and current are linearly related, so we can
+ find the torque at a particular current using Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:torque_from_current"
+
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{equation}
+\mbox{Torque}=\frac{\mbox{Desired current}}{\mbox{Stall current}}\cdot\mbox{Stall torque}\label{eq:torque_from_current}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let's redo the calculations, using a target current of 10 Amps and a gearbox
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gls{efficiency}
+\end_layout
+
+\end_inset
+
+ of 60%:
+\begin_inset Formula 
+\[
+\tau=\frac{10\,\mathrm{A}}{70\,\mathrm{A}}\cdot0.45\,\mathrm{N\cdot m}=0.064\,\mathrm{N\cdot m}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\tau_{out}=0.064\,\mathrm{N\cdot m}\cdot139\cdot\frac{60\%}{100\%}=5.4\,\mathrm{N\cdot m}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F=\frac{5.4\,\mathrm{N\cdot m}}{0.020\,\mathrm{m}}=270\,\mathrm{N}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is equivalent to 61 pounds, which should be sufficient to drive our
+ winch.
+\end_layout
+
+\begin_layout Subsection
+Concepts: Work and Power
+\end_layout
+
+\begin_layout Standard
+In physics, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gls{energy}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+energy
+\end_layout
+
+\end_inset
+
+ is commonly defined as the ability to do work.
+ You're probably aware that there are many forms of energy: chemical energy,
+ heat, light, motion, and so forth.
+ In the metric system, one unit for energy is the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gls{joule}
+\end_layout
+
+\end_inset
+
+, which is the energy required to exert 1 Newton of force for a distance
+ of 1 meter.
+\end_layout
+
+\begin_layout Standard
+Suppose we want to lift our robot 1.5 meters off the ground.
+ How much energy does that require?
+\end_layout
+
+\begin_layout Standard
+The downward force the robot exerts due to gravity is given by good old
+ Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:f-ma"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\mathbf{F}=m\cdot\mathbf{a}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Because we're specifically dealing with 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gls{weight}
+\end_layout
+
+\end_inset
+
+, we often change two of the symbols in the equation:
+\begin_inset Formula 
+\begin{equation}
+w=m\cdot g\label{eq:w=mg}
+\end{equation}
+
+\end_inset
+
+Here, 
+\begin_inset Formula $w$
+\end_inset
+
+ is the weight
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+weight
+\end_layout
+
+\end_inset
+
+ of the object (the downward force exerted on it) and 
+\begin_inset Formula $g$
+\end_inset
+
+ is the gravitational constant
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+gravitational constant
+\end_layout
+
+\end_inset
+
+ on Earth, roughly 
+\begin_inset Formula $9.8\,\mathrm{\frac{m}{s^{2}}}$
+\end_inset
+
+.
+ As before, 
+\begin_inset Formula $m$
+\end_inset
+
+ is the mass of the robot.
+ Assuming a 150 pound (68 kg) robot,
+\begin_inset Formula 
+\[
+w=68\,\mathrm{kg}\cdot9.8\,\mathrm{\frac{m}{s^{2}}=670\, N}
+\]
+
+\end_inset
+
+Energy is given by force multiplied by the distance, which we will represent
+ with the symbol 
+\begin_inset Formula $x$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+energy=F\cdot x\label{eq:w=fx}
+\end{equation}
+
+\end_inset
+
+which gives us
+\begin_inset Formula 
+\[
+energy=670\,\mathrm{N}\cdot1.5\,\mathrm{m}=1.0\,\times10^{3}\,\mathrm{J}
+\]
+
+\end_inset
+
+So it takes 1000 Joules to lift our robot.
+ We often combine equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:w=mg"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:w=fx"
+
+\end_inset
+
+ to write
+\begin_inset Formula 
+\begin{equation}
+PE=m\cdot g\cdot h\label{eq:pe=mgh}
+\end{equation}
+
+\end_inset
+
+where the term 
+\begin_inset Formula $PE$
+\end_inset
+
+ stands for 
+\begin_inset Quotes eld
+\end_inset
+
+potential energy
+\begin_inset Quotes erd
+\end_inset
+
+, and 
+\begin_inset Formula $h$
+\end_inset
+
+ stands for height.
+\end_layout
+
+\begin_layout Standard
+In everyday usage, we treat the terms 
+\begin_inset Quotes eld
+\end_inset
+
+power
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+strength
+\begin_inset Quotes erd
+\end_inset
+
+ as synonymous.
+ In physics, however, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gls{power}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+power
+\end_layout
+
+\end_inset
+
+ has a specific definition: the amount of work done in a specific amount
+ of time.
+ In other words, it's the number of Joules used in one second.
+ This unit is named the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gls{watt}
+\end_layout
+
+\end_inset
+
+ (abbreviated W).
+\end_layout
+
+\begin_layout Standard
+Suppose we want our lifting mechanism to do its job in 2.0 seconds.
+ How much power is required?
+\end_layout
+
+\begin_layout Standard
+We can use equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:p=w_over_deltaT"
+
+\end_inset
+
+, where 
+\begin_inset Formula $P$
+\end_inset
+
+ is the power required, 
+\begin_inset Formula $w$
+\end_inset
+
+ is the work done, and 
+\begin_inset Formula $\Delta t$
+\end_inset
+
+ is the total time it takes to do the work.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P=\frac{w}{\Delta t}\label{eq:p=w_over_deltaT}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Plugging in the values we have, we get:
+\begin_inset Formula 
+\[
+P=\frac{1.0\,\times10^{3}\,\mathrm{J}}{2.0\,\mathrm{s}}=5.0\,\times10^{2}\,\mathrm{W}
+\]
+
+\end_inset
+
+The concept of power is particularly important when choosing a motor: we
+ can gear a motor down to get more torque, or gear it up to get more speed,
+ but we can't do anything (that would be FIRST-legal) to increase the maximum
+ power output of the motor.
+\end_layout
+
+\begin_layout Subsection
+Concepts: Motor characteristics, Part 2
+\end_layout
+
+\begin_layout Subsubsection
+Output power
+\end_layout
+
+\begin_layout Standard
+How do we determine the motor's output power? It goes back the same physics
+ of force and work.
+\end_layout
+
+\begin_layout Standard
+As stated before, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gls{energy}
+\end_layout
+
+\end_inset
+
+ is given by 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gls{force}
+\end_layout
+
+\end_inset
+
+ multiplied by distance, which we state formally with Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:w_fx"
+
+\end_inset
+
+.
+ The variable 
+\begin_inset Formula $W$
+\end_inset
+
+ is work (the amount of energy used), 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ is the force applied, and 
+\begin_inset Formula $\mathbf{x}$
+\end_inset
+
+ is the distance traveled.
+ 
+\begin_inset Formula 
+\begin{equation}
+W=\mathbf{F\bullet x}\label{eq:w_fx}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Imagine a lever arm attached to the motor.
+ We prefer easy numbers, so we'll define it to be exactly 1 m long.
+ The motor is spinning at some speed in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gls{rpm}
+\end_layout
+
+\end_inset
+
+, which we'll call 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ Every time the motor spins around, the tip of the lever arm travels in
+ a circle with a circumference of
+\begin_inset Formula 
+\begin{equation}
+2\cdot\pi\cdot r=2\cdot\pi\,\mathrm{m}\label{eq:circumference-traveled}
+\end{equation}
+
+\end_inset
+
+We can easily convert from RPM to revolutions per second:
+\begin_inset Formula 
+\[
+RPS=\frac{RPM}{60}=\frac{r}{60}
+\]
+
+\end_inset
+
+which means that the tip of the lever arm travels
+\begin_inset Formula 
+\begin{equation}
+\frac{r}{60}\cdot2\cdot\pi\,\mathrm{m}\label{eq:leverarm_travel}
+\end{equation}
+
+\end_inset
+
+ each second.
+ Now we need to calculate the force at the end of the lever arm, which we
+ can do by rearranging Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:torque_multiplication"
+
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+F=\frac{\tau}{1\,\mathrm{m}}\label{eq:leverarm_force}
+\end{equation}
+
+\end_inset
+
+Now we use Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:w_fx"
+
+\end_inset
+
+ to combine Equations 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:leverarm_travel"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:leverarm_force"
+
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+W=\frac{\tau}{1\,\mathrm{m}}\cdot\frac{r}{60}\cdot2\cdot\pi\,\mathrm{m}
+\]
+
+\end_inset
+
+Because the distance we calculated in Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:circumference-traveled"
+
+\end_inset
+
+ is the distance the arm moves in 1 second, we can divide by 1 second to
+ get the output power in Watts.
+ 
+\begin_inset Formula 
+\[
+P=\tau\cdot\frac{r}{60}\cdot2\cdot\pi\,\mathrm{W}
+\]
+
+\end_inset
+
+Notice that we have three variables in this equation: the torque, 
+\begin_inset Formula $\tau$
+\end_inset
+
+, the rotational speed, 
+\begin_inset Formula $r$
+\end_inset
+
+, and the output power, 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ However, we know that 
+\begin_inset Formula $\tau$
+\end_inset
+
+ and 
+\begin_inset Formula $r$
+\end_inset
+
+ are related to each other.
+ To find the power, we have to pick a value for one of them, determine the
+ other using a motor curve chart, and then put these numbers into the equation.
+\end_layout
+
+\begin_layout Subsubsection
+Input power and efficiency
+\end_layout
+
+\begin_layout Standard
+The input power is electrical, and thus it is given by Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:p_iv"
+
+\end_inset
+
+, where 
+\begin_inset Formula $P$
+\end_inset
+
+ is the power, 
+\begin_inset Formula $I$
+\end_inset
+
+ is the current, and 
+\begin_inset Formula $V$
+\end_inset
+
+ is the voltage.
+ 
+\begin_inset Formula 
+\begin{equation}
+P=I\cdot V\label{eq:p_iv}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gls{efficiency}
+\end_layout
+
+\end_inset
+
+ of the motor is simply the percentage of the electrical input power that
+ gets turned into mechanical output power.
+ Mathematically,
+\begin_inset Formula 
+\[
+\eta=\frac{P_{out}}{P_{in}}
+\]
+
+\end_inset
+
+Generally, we don't manually calculate input power, output power, and efficiency
+ when we're working with a motor.
+ Like good engineers, we make a computer do the hard work once, and then
+ look it up in a table or graph.
+ We'll do this in the following section.
+\end_layout
+
+\begin_layout Subsubsection
+Motor curves
+\end_layout
+
+\begin_layout Standard
+The motor data discussed above is almost always plotted on a graph, known
+ as the motor curve.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:speed-torque_FP"
+
+\end_inset
+
+ is one example of a motor curve, which you may find on some datasheets.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:fp-allcurves"
+
+\end_inset
+
+ shows the same data, but also adds power and efficiency.
+ Note that the maximum power occurs at exactly half of free speed, but maximum
+ efficiency occurs at a much higher speed.
+ Most of the time we want to operate our motors between maximum efficiency
+ and maximum power.
+ Running motors close to stall is almost always a bad idea: the energy lost
+ due to the motor's inefficiency gets converted into heat, causing the motor
+ to heat up quickly.
+ Because they are large and heavy, the CIM motors can handle a lot of heat.
+ But the Fisher-Price and BaneBots motors have much less mass, and count
+ on an internal fan to cool the motor.
+ When one of these motors is stalled, the fan doesn't spin, and the motor
+ heats up and burns out within a few seconds.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/motor_selection/motor_curve_FP.svg
+	height 3in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Motor curve for Fisher-Price 9015 series motor
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:fp-allcurves"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Subsection
+Example: Lifting winch
+\end_layout
+
+\begin_layout Plain Layout
+Let's back up for a minute and work on a complete example:
+\end_layout
+
+\begin_layout Plain Layout
+We want to use the x motor to lift x which weighs x
+\end_layout
+
+\begin_layout Plain Layout
+We have a gearbox with a gear ratio of y and efficiency of x
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Do we dock efficiency on the speed or torque?
+\end_layout
+
+\begin_layout Plain Layout
+The 
+\begin_inset Quotes eld
+\end_inset
+
+laws of gearing
+\begin_inset Quotes erd
+\end_inset
+
+ say that we can't gain/lose either speed or torque.
+ The friction is an extra force - something like an extra torque on the
+ output shaft on the gearbox.
+ But this part we just lose.
+ So you can pick a torque, add/multiply by the loss factor, and find the
+ input speed.
+\end_layout
+
+\begin_layout Plain Layout
+When we have loss, the motor will be running at a lower speed and higher
+ torque
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Subsubsection
+Lifting winch
+\end_layout
+
+\begin_layout Itemize
+Robot mass -> force
+\end_layout
+
+\begin_layout Itemize
+motor torque @ X amps + gearbox -> output torque
+\end_layout
+
+\begin_layout Itemize
+derive shaft diameter
+\end_layout
+
+\begin_layout Itemize
+Note that this only holds the robot in place, we'll need more force to actually
+ lift.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Friction, Traction, and your Drivetrain
+\end_layout
+
+\begin_layout Subsection
+Concepts: Friction
+\end_layout
+
+\begin_layout Standard
+As you probably know, friction
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+friction
+\end_layout
+
+\end_inset
+
+ is a force that resists motion whenever two surfaces are in contact.
+ We can calculate the force due to friction using the equation 
+\begin_inset Formula 
+\begin{equation}
+F_{friction}=F_{N}\cdot\mu
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $F_{N}$
+\end_inset
+
+ is the 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gls{normalforce}
+\end_layout
+
+\end_inset
+
+ (the force applied perpendicular to the surface) and 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is the friction coefficient.
+ Typical robot wheels on carpet have friction coefficients between 0.6 and
+ 1.0, but some wheels may have coefficients as high as 1.3.
+\end_layout
+
+\begin_layout Standard
+In the case of a robot drivetrain, we often want to maximize 
+\begin_inset Formula $F_{friction}$
+\end_inset
+
+ with the carpet, which we typically refer to as traction
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+traction
+\end_layout
+
+\end_inset
+
+.
+ The more frictional force we have against the carpet, the harder we can
+ push.
+ There are only two things we can do to increase traction: increase the
+ normal force
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+normal force
+\end_layout
+
+\end_inset
+
+ (
+\begin_inset Formula $F_{N}$
+\end_inset
+
+), or increase the coefficient of friction (
+\begin_inset Formula $\mu$
+\end_inset
+
+).
+ In the case of FRC, there is generally little we can do to increase 
+\begin_inset Formula $F_{N}$
+\end_inset
+
+.
+ Our robot's mass is limited by the rules, and in recent games, teams have
+ not been allowed to lift field structures to increase the weight on their
+ wheels.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+In Zone Zeal (2002), there were three mobile goals, each weighing around
+ 82 kg (180 lbs).
+ By lifting the goals, robots could increase the weight on their wheels
+ and get better traction for the ensuing tug-of-war.
+\end_layout
+
+\end_inset
+
+ The only way to increase 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is to use a 
+\begin_inset Quotes eld
+\end_inset
+
+grippier
+\begin_inset Quotes erd
+\end_inset
+
+ wheel material such as roughtop.
+ Note that friction does not depend on the contact area between the surfaces,
+ which means that theoretically your robot's traction does not depend on
+ how many wheels you have.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+In practice, you may get slightly more traction by having more wheels on
+ the carpet, because the tread can dig into the carpet and grip somewhat
+ like Velcro - but this is heavily debated.
+ In situations where important parts of the field are covered with hard,
+ slick surfaces such as Stack Attack (2003) and Lunacy (2009) the theoretical
+ calculations are very close to reality.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is also important to note that every pair of surfaces has two values
+ for 
+\begin_inset Formula $\mu$
+\end_inset
+
+: the static coefficient of friction, 
+\begin_inset Formula $\mu_{s}$
+\end_inset
+
+, and the kinetic coefficient of friction, 
+\begin_inset Formula $\mu_{k}$
+\end_inset
+
+.
+ Static friction applies when the two surfaces are not moving relative to
+ each other, kinetic friction applies as the surfaces slide.
+ As you may have observed when sliding a heavy object, it takes more force
+ to overcome the static friction than it does the kinetic friction.
+ Mathematically, 
+\begin_inset Formula $\mu_{s}>\mu_{k}$
+\end_inset
+
+, regardless of the surfaces.
+\end_layout
+
+\begin_layout Subsection
+Example: Traction-limited drivetrains
+\end_layout
+
+\begin_layout Standard
+Because of the rough nature of FRC games, we generally want our drivetrains
+ to be traction-limited
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+traction-limited
+\end_layout
+
+\end_inset
+
+.
+ That is, we want our drivetrain to have enough torque so that when the
+ robot gets into a shoving match, the wheels slip before the motors stall
+ or a breaker trips.
+ In this case, traction is the limit on our robot's pushing ability, and
+ not our motors, hence the term 
+\begin_inset Quotes eld
+\end_inset
+
+traction-limited
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Suppose we have a 150 lb (68 kg) robot using 8
+\begin_inset Quotes erd
+\end_inset
+
+ (20.3 cm) wheels with 
+\begin_inset Formula $\mu_{s}=1.0$
+\end_inset
+
+.
+ The normal force will be
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F_{N}=w=68\,\mathrm{kg}\cdot9.8\,\mathrm{\frac{m}{s^{2}}=670\, N}
+\]
+
+\end_inset
+
+The total traction will be
+\begin_inset Formula 
+\[
+F_{friction}=670\,\mathrm{N}\cdot1.0=670\,\mathrm{N}
+\]
+
+\end_inset
+
+Since the wheels have a diameter of 20.3 cm, they have a radius of 10.2 cm
+ = 0.102 m.
+ From this, we can find the total torque on the wheels:
+\begin_inset Formula 
+\[
+\tau=670\,\mathrm{N}\cdot0.102\,\mathrm{m}=68\,\mathrm{N\cdot m}
+\]
+
+\end_inset
+
+Note that each wheel will only experience part of this torque; this is the
+ total for all of the wheels touching the carpet.
+\end_layout
+
+\begin_layout Standard
+If we use 4 CIM motors with two CIMple gearboxes having a 4.67:1 ratio, what
+ sprocket ratio do we need to make the drivetrain traction-limited?
+\end_layout
+
+\begin_layout Standard
+Each CIM will be on a 40 A breaker, so we can use equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:torque_from_current"
+
+\end_inset
+
+ to find the maximum torque from each motor: 0.73 N-m.
+ Multiplying by four motors gives us a total of 2.9 N-m.
+ Coming out of the gearbox, we will have
+\begin_inset Formula 
+\[
+4.67\cdot2.9\,\mathrm{N\cdot m}=14\,\mathrm{N\cdot m}
+\]
+
+\end_inset
+
+ of torque.
+ We need a total of 68 N-m, so the ratio we need is
+\begin_inset Formula 
+\[
+\frac{68\,\mathrm{N\cdot m}}{14\,\mathrm{N\cdot m}}=4.9
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+How fast will this robot go? We can get an estimate for top speed by dividing
+ the motor's free speed by the total gear/sprocket ratio:
+\begin_inset Formula 
+\[
+\frac{5310\,\mathrm{RPM}}{4.67\cdot4.9}=230\,\mathrm{RPM}=3.8\,\mathrm{\frac{revolutions}{second}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+3.8\,\mathrm{\frac{rev}{s}}\cdot0.203\,\mathrm{m}\cdot\pi=2.4\,\mathrm{\frac{m}{s}}
+\]
+
+\end_inset
+
+which is equivalent to 7.9 feet per second.
+\end_layout
+
+\begin_layout Standard
+There are several things to notice about this calculation.
+ First, we assumed that each motor had an absolute current limit of 40 A.
+ This is a helpful estimate, but is not correct: the robot's main breaker
+ trips at 120 A, so continuously running four motors at 40 Amps each is
+ not possible.
+ More importantly, breakers do not trip instantaneously: 40 A breakers can
+ handle brief spikes of 60 to 80 A, and the main breaker takes several seconds
+ to trip.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Need specific information here
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Second, note that the final calculated speed is somewhat slow.
+ If you need higher speed, you have three options: You can add more motors
+ on your drivetrain, increasing the torque available to slip your wheels.
+ You can use a shifting transmission, so that you have a slow, traction-limited
+ gear and a fast, torque-limited gear.
+ Or you could ignore the problem and hope to avoid prolonged pushing matches.
+ All three of these are valid options and are used by numerous teams.
+\end_layout
+
+\begin_layout Standard
+Finally, we've conveniently ignored the gearbox and chain efficiency in
+ these calculations, but they should be included in your analysis.
+\end_layout
+
+\begin_layout Subsection
+Example: Maximum acceleration
+\end_layout
+
+\begin_layout Standard
+In 2009, the playing field was covered with a hard, slick surface and robots
+ were required to use special hard plastic wheels.
+ The friction between the 
+\begin_inset Quotes eld
+\end_inset
+
+rover wheels
+\begin_inset Quotes erd
+\end_inset
+
+ and the 
+\begin_inset Quotes eld
+\end_inset
+
+regolith
+\begin_inset Quotes erd
+\end_inset
+
+ was given as 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+What?
+\end_layout
+
+\end_inset
+
+.
+ In this scenario, what is a robot's maximum acceleration? Starting at rest,
+ how far could a robot go in the first 3 seconds of autonomous mode?
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+Motor comparison table
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Motor-comparison-table"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hspace{}
+\length -1.5in
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="8">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Motor
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Technical name
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Max Power
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stall Torque
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stall Current
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Free Speed
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Free Current
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Max Efficiency
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Watts
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N-m
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Amps
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+RPM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Amps
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CIM
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+FR-801-001 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+337
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.43
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+133
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5,310
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+65%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Fisher-Price
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9015
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+184
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.45
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+70
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15,600
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+68%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nippon-Denso
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+262100-3030
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+23
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18.6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+84
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+24%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+printglossaries
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset index_print
+LatexCommand printindex
+type "idx"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

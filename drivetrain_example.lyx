@@ -1,0 +1,266 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{listings}
+\usepackage{courier}
+\usepackage{color}
+\definecolor{lbcolor}{rgb}{0.95,0.95,0.95}
+\lstset{
+    backgroundcolor=\color{lbcolor},
+    numbers=left,
+    language=C,
+    basicstyle=\ttfamily,
+    identifierstyle=\ttfamily,
+    keywordstyle=\color[rgb]{.6,0,.2}\textbf,
+    commentstyle=\color[rgb]{0.133,0.545,0.133},
+    stringstyle=\color[rgb]{0,0,1},
+}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    breaklinks=true
+}
+ 
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+I'll assume that you want a traction-limited drivetrain.
+ That is, the motors should be able to exert enough force to slip the wheels.
+\end_layout
+
+\begin_layout Standard
+First, let's calculate the force between the carpet and the wheels due to
+ friction.
+ The robot weighs 150
+\begin_inset space ~
+\end_inset
+
+lbs and there are four wheels.
+ We'll denote the coefficient of static friction as 
+\begin_inset Formula $\mu$
+\end_inset
+
+.
+ For one wheel:
+\begin_inset Formula 
+\[
+F=\frac{150\, lb}{4}\cdot\mu
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For a mecanum wheel, the torque required to produce a given force is given
+ by
+\begin_inset Formula 
+\[
+\tau=\frac{1}{\sqrt{2}}\cdot F\cdot r
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $r$
+\end_inset
+
+ is the radius of the wheel.
+ Note that for regular wheels, the torque is instead 
+\begin_inset Formula $\tau=F\cdot r$
+\end_inset
+
+.
+ Putting these equations together, we can write,
+\begin_inset Formula 
+\[
+\tau=\frac{1}{\sqrt{2}}\cdot38\,\mathrm{lb}\cdot\mu\cdot r
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Inserting the numbers you gave (
+\begin_inset Formula $\mu=0.9$
+\end_inset
+
+ and 
+\begin_inset Formula $r=4\,\mathrm{in}$
+\end_inset
+
+), we get
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\tau=\frac{1}{\sqrt{2}}\cdot38\,\mathrm{lb}\cdot0.9\cdot4=193\,\mathrm{in\cdot lbs}=21.8\,\mathrm{N\cdot m}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+\tau=\frac{1}{\sqrt{2}}\cdot38\,\mathrm{lb}\cdot0.6\cdot4=129\,\mathrm{in\cdot lbs}=14.6\,\mathrm{N\cdot m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The CIMple box has a 12:56 gear ratio, and a single CIM motor has stall
+ torque of 2.42
+\begin_inset space ~
+\end_inset
+
+Nm.
+ You have a 39:42 reduction, so the maximum torque on a wheel is
+\begin_inset Formula 
+\[
+\tau_{stall}=2.42\,\mathrm{N\cdot m}\cdot\frac{56}{12}\cdot\frac{42}{39}=12.2\,\mathrm{N\cdot m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is much less, than the 
+\end_layout
+
+\begin_layout Standard
+Conversely, we can calculate the approximate speed of the robot.
+ If you were running the CIM near maximum efficiency, the RPM would be between
+ 70 and 80% of free speed, say 3600 RPM.
+ The angular velocity of the wheel is
+\begin_inset Formula 
+\[
+\omega_{wheel}=3600\,\mathrm{\frac{rev}{min}}\cdot\frac{12}{56}\cdot\frac{39}{42}=716\,\mathrm{\frac{rev}{min}}
+\]
+
+\end_inset
+
+which means the robot's velocity is
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+v_{robot}=716\,\mathrm{\frac{rev}{min}}\cdot\frac{1}{60}\,\mathrm{\frac{min}{sec}}\cdot\frac{8\cdot\pi}{12}\,\mathrm{\frac{feet}{rev}}=25\,\mathrm{\frac{feet}{sec}}
+\]
+
+\end_inset
+
+which is clearly way too fast.
+\end_layout
+
+\begin_layout Standard
+Working backwards, if you want a particular torque on the wheel, you can
+ find the sprocket ratio:
+\begin_inset Formula 
+\[
+r_{required}=\frac{\tau}{2.42\,\mathrm{N\cdot m}\cdot\frac{56}{12}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+17 February 2013
+\begin_inset space \quad{}
+\end_inset
+
+Steven Bell
+\end_layout
+
+\end_body
+\end_document
